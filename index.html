@@ -1,0 +1,1884 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>
+      Arash Keshani Zade – .NET Software Engineer | BI & SQL Server Specialist
+    </title>
+    <meta
+      name="description"
+      content="CV of Arash Keshani Zade, .NET Software Engineer and BI & SQL Server Specialist."
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&family=Vazirmatn:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #f1f5fb;
+        --sf: rgba(255, 255, 255, 0.82);
+        --tx: #0b1b33;
+        --mu: #4a5d7a;
+        --ln: rgba(30, 64, 175, 0.14);
+        --a1: #1d4ed8;
+        --a2: #0f766e;
+        --a3: #0284c7;
+        --sh: 0 14px 40px -18px rgba(15, 50, 120, 0.35);
+        --g: linear-gradient(120deg, var(--a1), var(--a3) 55%, var(--a2));
+        --gb: linear-gradient(120deg, #1e3a8a, #1d4ed8 55%, #0f766e);
+        box-sizing: border-box;
+        padding-top: env(safe-area-inset-top, 0px);
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) {
+          --bg: #060f1e;
+          --sf: rgba(148, 180, 255, 0.06);
+          --tx: #e8eefb;
+          --mu: #9db0cc;
+          --ln: rgba(148, 180, 255, 0.15);
+          --a1: #60a5fa;
+          --a2: #2dd4bf;
+          --a3: #38bdf8;
+          --sh: 0 14px 40px -18px rgba(0, 0, 0, 0.7);
+        }
+      }
+      :root[data-theme="dark"] {
+        --bg: #060f1e;
+        --sf: rgba(148, 180, 255, 0.06);
+        --tx: #e8eefb;
+        --mu: #9db0cc;
+        --ln: rgba(148, 180, 255, 0.15);
+        --a1: #60a5fa;
+        --a2: #2dd4bf;
+        --a3: #38bdf8;
+        --sh: 0 14px 40px -18px rgba(0, 0, 0, 0.7);
+      }
+      *,
+      ::before,
+      ::after {
+        box-sizing: inherit;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 84px);
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--tx);
+        font:
+          16px/1.65 Inter,
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+      }
+      body::before {
+        content: "";
+        position: fixed;
+        inset: -10%;
+        z-index: -1;
+        pointer-events: none;
+        background:
+          radial-gradient(
+            620px 420px at 12% 8%,
+            color-mix(in srgb, var(--a1) 30%, transparent),
+            transparent
+          ),
+          radial-gradient(
+            520px 420px at 88% 18%,
+            color-mix(in srgb, var(--a2) 24%, transparent),
+            transparent
+          ),
+          radial-gradient(
+            640px 500px at 50% 100%,
+            color-mix(in srgb, var(--a3) 18%, transparent),
+            transparent
+          ),
+          radial-gradient(
+              color-mix(in srgb, var(--tx) 8%, transparent) 1px,
+              transparent 1px
+            )
+            0 0/30px 30px;
+        animation: dr 24s ease-in-out infinite alternate;
+      }
+      @keyframes dr {
+        to {
+          transform: translate3d(3%, 4%, 0) scale(1.08);
+        }
+      }
+      h1,
+      h2,
+      h3,
+      .n,
+      .lg,
+      .sub {
+        font-family: Sora, "Segoe UI", system-ui, sans-serif;
+        margin: 0;
+        line-height: 1.1;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      a:focus-visible,
+      button:focus-visible {
+        outline: 2px solid var(--a1);
+        outline-offset: 2px;
+      }
+      #pg {
+        position: fixed;
+        top: env(safe-area-inset-top, 0px);
+        left: 0;
+        height: 3px;
+        width: 0;
+        background: var(--g);
+        z-index: 30;
+      }
+      .nav {
+        position: sticky;
+        top: calc(env(safe-area-inset-top, 0px) + 10px);
+        z-index: 20;
+        width: min(1120px, calc(100% - 24px));
+        margin: 10px auto 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 10px;
+        border: 1px solid var(--ln);
+        border-radius: 99px;
+        background: color-mix(in srgb, var(--bg) 72%, transparent);
+        backdrop-filter: blur(16px) saturate(1.4);
+        -webkit-backdrop-filter: blur(16px) saturate(1.4);
+        box-shadow: var(--sh);
+      }
+      .lg {
+        flex: none;
+        width: 38px;
+        height: 38px;
+        display: grid;
+        place-items: center;
+        border-radius: 12px;
+        background: var(--gb);
+        color: #fff;
+        font-weight: 800;
+        font-size: 15px;
+        overflow: hidden;
+      }
+      .lk {
+        display: flex;
+        gap: 2px;
+        flex: 1;
+        overflow-x: auto;
+        scrollbar-width: none;
+      }
+      .lk a {
+        flex: none;
+        padding: 7px 14px;
+        border-radius: 99px;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--mu);
+        transition: 0.2s;
+      }
+      .lk a:hover {
+        color: var(--tx);
+        background: var(--ln);
+      }
+      .lk a.on {
+        background: var(--tx);
+        color: var(--bg);
+      }
+      .tb {
+        flex: none;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        border: 1px solid var(--ln);
+        background: var(--sf);
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 700;
+        color: var(--tx);
+        font-family: inherit;
+        display: grid;
+        place-items: center;
+      }
+      /* ---------- Hamburger menu (mobile) ---------- */
+      .ham {
+        display: none;
+      }
+      @media (max-width: 860px) {
+        .ham {
+          display: grid;
+          place-items: center;
+        }
+        .lk {
+          display: none;
+          position: absolute;
+          top: calc(100% + 8px);
+          left: 0;
+          right: 0;
+          flex-direction: column;
+          align-items: stretch;
+          gap: 2px;
+          padding: 10px;
+          border-radius: 20px;
+          border: 1px solid var(--ln);
+          background: color-mix(in srgb, var(--bg) 94%, transparent);
+          backdrop-filter: blur(16px) saturate(1.4);
+          -webkit-backdrop-filter: blur(16px) saturate(1.4);
+          box-shadow: var(--sh);
+          max-height: min(70vh, 520px);
+          overflow-y: auto;
+        }
+        .lk.open {
+          display: flex;
+        }
+        .lk a {
+          flex: none;
+          width: 100%;
+          text-align: center;
+          padding: 12px 14px;
+          font-size: 15px;
+        }
+      }
+      main {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 0 20px 56px;
+      }
+      section {
+        padding-top: 76px;
+      }
+      .hero {
+        display: grid;
+        grid-template-columns: 1.3fr 0.7fr;
+        gap: 36px;
+        align-items: center;
+        padding-top: clamp(40px, 7vw, 84px);
+      }
+      @media (max-width: 860px) {
+        .hero {
+          grid-template-columns: 1fr;
+        }
+      }
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        padding: 7px 15px;
+        border: 1px solid var(--ln);
+        border-radius: 99px;
+        background: var(--sf);
+        font-size: 14px;
+        font-weight: 500;
+      }
+      .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #22c55e;
+        animation: pl 2s infinite;
+      }
+      @keyframes pl {
+        0% {
+          box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6);
+        }
+        70%,
+        100% {
+          box-shadow: 0 0 0 9px transparent;
+        }
+      }
+      h1 {
+        font-size: clamp(42px, 7.4vw, 84px);
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        margin: 22px 0 14px;
+      }
+      .gt {
+        background: var(--g);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        animation: sh 7s ease-in-out infinite alternate;
+      }
+      @keyframes sh {
+        to {
+          background-position: 100% center;
+        }
+      }
+      .sub {
+        font-size: clamp(17px, 2.2vw, 22px);
+        font-weight: 600;
+        margin: 0 0 14px;
+      }
+      .lead {
+        color: var(--mu);
+        max-width: 54ch;
+        font-size: 18px;
+        margin: 16px 0 26px;
+      }
+      .btns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .b {
+        padding: 12px 22px;
+        border-radius: 14px;
+        font-weight: 600;
+        font-size: 15px;
+        border: 1px solid var(--ln);
+        background: var(--sf);
+        transition:
+          transform 0.25s,
+          box-shadow 0.25s;
+      }
+      .b:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--sh);
+      }
+      .b.p {
+        background: var(--gb);
+        color: #fff;
+        border: 0;
+        box-shadow: 0 12px 28px -12px #2563eb;
+      }
+      .pf {
+        text-align: center;
+        padding: 30px 26px 18px;
+      }
+      .av {
+        position: relative;
+        width: 118px;
+        height: 118px;
+        margin: 0 auto 18px;
+      }
+      .av::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        background: conic-gradient(#3b82f6, #06b6d4, #14b8a6, #3b82f6);
+        animation: rot 6s linear infinite;
+      }
+      .av span {
+        position: absolute;
+        inset: 4px;
+        border-radius: 50%;
+        background: var(--bg);
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+        font:
+          800 36px Sora,
+          sans-serif;
+      }
+      .av span img {
+        width: 108%;
+        height: 111%;
+        object-fit: cover;
+        display: block;
+        border-radius: 50%;
+      }
+      .av b {
+        font-weight: 800;
+      }
+      @keyframes rot {
+        to {
+          transform: rotate(1turn);
+        }
+      }
+      .kv {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding: 12px 0;
+        border-top: 1px solid var(--ln);
+      }
+      .kv small {
+        color: var(--mu);
+        font-size: 12px;
+      }
+      .kv b {
+        font-size: 14.5px;
+        font-weight: 600;
+      }
+      .mq {
+        overflow: hidden;
+        margin-top: 48px;
+        -webkit-mask-image: linear-gradient(
+          90deg,
+          transparent,
+          #000 10%,
+          #000 90%,
+          transparent
+        );
+        mask-image: linear-gradient(
+          90deg,
+          transparent,
+          #000 10%,
+          #000 90%,
+          transparent
+        );
+      }
+      #mq {
+        display: flex;
+        width: max-content;
+        animation: mq 36s linear infinite;
+      }
+      .mq:hover #mq {
+        animation-play-state: paused;
+      }
+      #mq span {
+        margin-right: 10px;
+        padding: 8px 18px;
+        border: 1px solid var(--ln);
+        border-radius: 99px;
+        background: var(--sf);
+        font-weight: 600;
+        font-size: 14px;
+        white-space: nowrap;
+      }
+      @keyframes mq {
+        to {
+          transform: translateX(-50%);
+        }
+      }
+      .ro {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+        gap: 14px;
+        margin-top: 30px;
+      }
+      .ro .card {
+        padding: 20px;
+      }
+      .n {
+        display: block;
+        font-size: clamp(34px, 4vw, 46px);
+        font-weight: 800;
+        background: var(--g);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .ro small {
+        color: var(--mu);
+        font-size: 14px;
+      }
+      .card {
+        position: relative;
+        padding: 26px;
+        border: 1px solid var(--ln);
+        border-radius: 22px;
+        background: var(--sf);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        box-shadow: var(--sh);
+        overflow: hidden;
+        transition:
+          transform 0.35s,
+          border-color 0.35s;
+      }
+      .card::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 3px;
+        background: var(--g);
+      }
+      .card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s;
+        background: radial-gradient(
+          380px circle at var(--x, 50%) var(--y, 0%),
+          color-mix(in srgb, var(--a1) 24%, transparent),
+          transparent 65%
+        );
+      }
+      .card:hover {
+        transform: translateY(-4px);
+        border-color: color-mix(in srgb, var(--a1) 55%, transparent);
+      }
+      .card:hover::after {
+        opacity: 1;
+      }
+      .rv {
+        opacity: 0;
+      }
+      .rv.in {
+        opacity: 1;
+        animation: up 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) backwards;
+      }
+      @keyframes up {
+        from {
+          opacity: 0;
+          transform: translateY(28px);
+        }
+      }
+      .ro > :nth-child(2) {
+        animation-delay: 0.08s;
+      }
+      .ro > :nth-child(3) {
+        animation-delay: 0.16s;
+      }
+      .ro > :nth-child(4) {
+        animation-delay: 0.24s;
+      }
+      .ro > :nth-child(5) {
+        animation-delay: 0.32s;
+      }
+      h2 {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        font-size: clamp(26px, 4vw, 38px);
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        margin-bottom: 26px;
+      }
+      h2::before {
+        content: "";
+        width: 8px;
+        height: 30px;
+        border-radius: 9px;
+        background: var(--g);
+      }
+      h2::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: linear-gradient(90deg, var(--ln), transparent);
+      }
+      h3 {
+        font-size: 19px;
+        font-weight: 700;
+      }
+      h4 {
+        font-size: 13.5px;
+        font-weight: 600;
+        color: var(--mu);
+        margin: 20px 0 0;
+        letter-spacing: 0.02em;
+      }
+      p {
+        margin: 0.8em 0;
+      }
+      .ab {
+        max-width: 70ch;
+      }
+      #about .card > .ab:first-child {
+        font-size: 18px;
+        margin-top: 0;
+      }
+      .mu {
+        color: var(--mu);
+      }
+      b {
+        font-weight: 600;
+      }
+      .role {
+        display: inline-block;
+        margin: 8px 0 0;
+        padding: 3px 11px;
+        border-radius: 10px;
+        font-size: 12.5px;
+        font-weight: 600;
+        color: var(--a1);
+        background: color-mix(in srgb, var(--a1) 12%, transparent);
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 10px 0;
+      }
+      li {
+        position: relative;
+        padding-left: 20px;
+        margin: 8px 0;
+        color: var(--mu);
+      }
+      li b {
+        color: var(--tx);
+      }
+      li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.7em;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--g);
+      }
+      .ck li::before {
+        content: "✓";
+        top: 0;
+        width: auto;
+        height: auto;
+        background: none;
+        color: var(--a2);
+        font-weight: 800;
+      }
+      .tg {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 12px 0;
+      }
+      .tg span {
+        font-size: 13px;
+        font-weight: 500;
+        padding: 4px 13px;
+        border-radius: 99px;
+        border: 1px solid var(--ln);
+        background: color-mix(in srgb, var(--a2) 9%, transparent);
+        transition:
+          transform 0.2s,
+          border-color 0.2s;
+      }
+      .tg span:hover {
+        transform: translateY(-2px);
+        border-color: var(--a2);
+      }
+      .xh {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 8px 24px;
+      }
+      .xh h3 {
+        font-size: 26px;
+      }
+      .grid {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+      }
+      .pj:first-child {
+        grid-column: 1/-1;
+      }
+      .pj:first-child ul {
+        columns: 2 260px;
+        column-gap: 32px;
+      }
+      .pj li {
+        break-inside: avoid;
+      }
+      .g2 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+        gap: 18px;
+      }
+      .sk {
+        margin: 16px 0 0;
+      }
+      .sk > span {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        font-size: 15px;
+      }
+      .sk em {
+        font-style: normal;
+        color: var(--mu);
+        font-size: 13px;
+      }
+      .bar {
+        height: 8px;
+        border-radius: 9px;
+        background: var(--ln);
+        margin-top: 7px;
+        overflow: hidden;
+      }
+      .bar i {
+        display: block;
+        height: 100%;
+        width: 0;
+        border-radius: 9px;
+        background: var(--g);
+        transition: width 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+      .in .bar i {
+        width: var(--w);
+      }
+      .cta {
+        text-align: center;
+        padding: clamp(28px, 6vw, 60px);
+        background:
+          radial-gradient(
+            600px 300px at 15% 0%,
+            color-mix(in srgb, var(--a1) 26%, transparent),
+            transparent
+          ),
+          radial-gradient(
+            500px 300px at 90% 100%,
+            color-mix(in srgb, var(--a2) 22%, transparent),
+            transparent
+          ),
+          var(--sf);
+      }
+      .tiles {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+        gap: 14px;
+        margin-top: 28px;
+        text-align: left;
+      }
+      .tile {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 16px;
+        border: 1px solid var(--ln);
+        border-radius: 16px;
+        background: var(--bg);
+        overflow-wrap: anywhere;
+        transition:
+          transform 0.25s,
+          border-color 0.25s;
+      }
+      a.tile:hover {
+        transform: translateY(-3px);
+        border-color: var(--a1);
+      }
+      .tile i {
+        font-style: normal;
+        font-size: 20px;
+        width: 44px;
+        height: 44px;
+        flex: none;
+        display: grid;
+        place-items: center;
+        border-radius: 12px;
+        background: color-mix(in srgb, var(--a1) 14%, transparent);
+      }
+      .tile small {
+        display: block;
+        color: var(--mu);
+        font-size: 12px;
+      }
+      .tile b {
+        font-size: 14px;
+      }
+      footer {
+        text-align: center;
+        color: var(--mu);
+        font-size: 14px;
+        padding: 40px 0 8px;
+      }
+
+      /* ---------- Persian / RTL additions ---------- */
+      html[lang="fa"] body,
+      html[lang="fa"] button {
+        font-family: Vazirmatn, Inter, system-ui, sans-serif;
+      }
+      html[lang="fa"] h1,
+      html[lang="fa"] h2,
+      html[lang="fa"] h3,
+      html[lang="fa"] .n,
+      html[lang="fa"] .lg,
+      html[lang="fa"] .sub {
+        font-family: Vazirmatn, Sora, system-ui, sans-serif;
+      }
+      html[lang="fa"] h1,
+      html[lang="fa"] h2 {
+        letter-spacing: 0;
+      }
+      html[lang="fa"] body {
+        line-height: 1.85;
+      }
+      html[dir="rtl"] .kv,
+      html[dir="rtl"] .tiles {
+        text-align: right;
+      }
+      html[dir="rtl"] li {
+        padding-left: 0;
+        padding-right: 20px;
+      }
+      html[dir="rtl"] li::before {
+        left: auto;
+        right: 0;
+      }
+      html[dir="rtl"] .lk a {
+        letter-spacing: 0;
+      }
+      html[dir="rtl"] .av span {
+        font-family: Vazirmatn, Sora, sans-serif;
+      }
+      html[dir="rtl"] .bar i {
+        margin-left: auto;
+      }
+      /* ---------------------------------------------- */
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        ::before,
+        ::after {
+          animation: none !important;
+          transition: none !important;
+        }
+        html {
+          scroll-behavior: auto;
+        }
+        .rv {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="pg"></div>
+    <nav class="nav">
+      <a class="lg" href="#top">AK</a>
+      <div class="lk" id="navlinks"></div>
+      <button id="lng" class="tb" type="button" aria-label="Switch language">
+        FA
+      </button>
+      <button
+        id="th"
+        class="tb"
+        type="button"
+        aria-label="Toggle theme"
+      ></button>
+      <button
+        id="mnu"
+        class="tb ham"
+        type="button"
+        aria-label="Toggle menu"
+        aria-controls="navlinks"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+    </nav>
+    <main>
+      <section class="hero" id="top">
+        <div>
+          <span class="pill" id="h-pill"></span>
+          <h1><span class="gt" id="h-name"></span></h1>
+          <p class="sub" id="h-sub"></p>
+          <span class="pill" id="h-loc"></span>
+          <p class="lead" id="h-lead"></p>
+          <div class="btns" id="h-btns"></div>
+        </div>
+        <div class="card pf">
+          <div class="av">
+            <span>
+              <!-- ✏️ Replace the src below with your own photo URL -->
+              <img id="avatar" src="prof_main.png" alt="Arash Keshani Zade" />
+            </span>
+          </div>
+          <div id="pf"></div>
+        </div>
+      </section>
+      <div class="mq"><div id="mq"></div></div>
+      <div class="ro" id="stats"></div>
+
+      <section id="about">
+        <h2 id="h-about"></h2>
+        <div class="card" id="about-body"></div>
+      </section>
+
+      <section id="experience">
+        <h2 id="h-exp"></h2>
+        <div class="card">
+          <div class="xh">
+            <div>
+              <h3 id="ex-co"></h3>
+              <p class="role" style="margin: 6px 0 0" id="ex-role"></p>
+            </div>
+            <div class="mu" id="ex-meta"></div>
+          </div>
+          <ul id="ex"></ul>
+          <h4 id="h-rs"></h4>
+          <div class="tg" id="rs"></div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2 id="h-pr"></h2>
+        <div class="grid" id="pr"></div>
+      </section>
+
+      <section id="skills">
+        <h2 id="h-sk"></h2>
+        <div class="g2" id="sk"></div>
+        <h3 style="margin: 40px 0 16px" id="h-co"></h3>
+        <div class="card"><div class="tg" id="co"></div></div>
+      </section>
+
+      <section id="clients">
+        <h2 id="h-cl"></h2>
+        <p class="ab" id="cl-lead"></p>
+        <div class="card"><div class="tg" id="cl"></div></div>
+      </section>
+
+      <section id="more">
+        <h2 id="h-more"></h2>
+        <div class="g2">
+          <div class="card">
+            <h3 id="edu-uni"></h3>
+            <p style="margin: 8px 0 0" id="edu-deg"></p>
+            <p class="mu" style="margin: 0" id="edu-yr"></p>
+          </div>
+          <div class="card">
+            <h3 id="lg-t"></h3>
+            <p class="mu" style="margin: 8px 0 0" id="lg-lvl"></p>
+            <div id="lg"></div>
+            <p style="margin: 18px 0 0" id="lg-native"></p>
+          </div>
+        </div>
+        <div class="card" style="margin-top: 18px">
+          <h3 id="h-ad"></h3>
+          <ul class="ck" id="ad"></ul>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2 id="h-ct"></h2>
+        <div class="card cta">
+          <h3 style="font-size: clamp(24px, 4vw, 34px)" id="ct-title"></h3>
+          <p
+            class="mu"
+            style="max-width: 56ch; margin: 12px auto 0"
+            id="ct-sub"
+          ></p>
+          <div class="tiles" id="ct-tiles"></div>
+        </div>
+        <footer id="ft"></footer>
+      </section>
+    </main>
+
+    <script>
+      /* ============================================================
+         Bilingual data (English = default, Persian = added)
+      ============================================================ */
+      const DATA = {
+        en: {
+          dir: "ltr",
+          locale: "en-US",
+          title:
+            "Arash Keshani Zade – .NET Software Engineer | BI & SQL Server Specialist",
+          desc: "CV of Arash Keshani Zade, .NET Software Engineer and BI & SQL Server Specialist.",
+          nav: [
+            "Home",
+            "About",
+            "Experience",
+            "Projects",
+            "Skills",
+            "Clients",
+            "Education",
+            "Contact",
+          ],
+          hero: {
+            pill: "Open to international opportunities",
+            name: "Arash Keshani Zade",
+            sub: ".NET Software Engineer | BI & SQL Server Specialist",
+            loc: "Tehran, Iran",
+            lead: "Enterprise software and business intelligence for large-scale industrial and governmental organizations.",
+            email: "Email me",
+            linkedin: "LinkedIn",
+            github: "GitHub",
+          },
+          pf: [
+            ["Current role", "Support Team Lead | Technical Lead"],
+            ["Company", "Behin Gostar Giti, since 2022"],
+            ["Education", "B.Sc. Computer Engineering — Software"],
+          ],
+          stats: [
+            { n: 5, p: "~", s: "", l: "years of experience" },
+            { n: 20, p: "", s: "+", l: "organizations and clients" },
+            { n: 100, p: "", s: "+", l: "systems and projects" },
+            { n: 1000, p: "", s: "+", l: "KPIs and indicators" },
+            { n: 10, p: "", s: "+", l: "team members coordinated" },
+          ],
+          sec: {
+            about: "Professional Summary",
+            exp: "Professional Experience",
+            pr: "Selected Projects",
+            sk: "Technical Skills",
+            co: "Core Competencies",
+            cl: "Client & Organization Experience",
+            more: "Education & Languages",
+            ct: "Contact",
+          },
+          about: [
+            "Software Engineer and BI &amp; SQL Server Specialist with approximately 5 years of professional experience in software development, business intelligence, SQL Server, data warehousing, and strategic management systems.",
+            "Experienced in designing and implementing enterprise software and BI solutions for large-scale industrial and governmental organizations. Strong background in <b>C#, ASP.NET Core, SQL Server, T-SQL, SSIS, Power BI, Power BI Report Server, DWH, and strategic management systems</b>.",
+            "Experienced in requirements analysis, KPI implementation, system integration, technical leadership, client communication, training, and supporting enterprise systems involving sensitive organizational data.",
+            "Worked across <b>20+ organizations and clients</b>, contributing to <b>100+ systems/projects and 1,000+ organizational KPIs and indicators</b>, while coordinating and supporting a technical team of <b>10+ members</b>.",
+          ],
+          ex: {
+            company: "Behin Gostar Giti",
+            role: "Support Team Lead | Technical Lead | Software Developer",
+            meta: "2022 – Present<br />Tehran, Iran",
+            rsTitle: "Selected Technical Responsibilities",
+            items: [
+              "Develop and maintain enterprise applications using <b>C#, .NET, ASP.NET Core MVC, Entity Framework Core, SQL Server, and T-SQL</b>.",
+              "Design and implement <b>Business Intelligence and Data Warehouse solutions</b> for large industrial organizations.",
+              "Develop and maintain BI dashboards and reporting solutions using <b>Power BI, Power BI Report Server, SSIS, SQL Server, and .NET Core</b>.",
+              "Analyze business and organizational requirements and translate them into technical and software solutions.",
+              "Design, implement, and monitor <b>KPIs and strategic management indicators</b> for organizational and industrial environments.",
+              "Work directly with senior managers, technical teams, and organizational stakeholders to analyze requirements and deliver enterprise solutions.",
+              "Take technical responsibility for multiple enterprise software and strategic management projects.",
+              "Coordinate and support a technical team of <b>10+ members</b>, including troubleshooting, knowledge transfer, documentation, and project support.",
+              "Conduct user and client training sessions and provide technical documentation for enterprise systems.",
+              "Participate in system integration and communication between organizational software systems and data sources.",
+              "Work with sensitive and restricted organizational data in governmental and industrial environments.",
+            ],
+            rs: [
+              "Software architecture and enterprise application development",
+              "SQL Server database design and advanced T-SQL development",
+              "Query optimization and performance improvement",
+              "BI and DWH implementation",
+              "ETL development using SSIS",
+              "Power BI dashboard and reporting implementation",
+              "Power BI Report Server administration and access integration",
+              "Authentication and authorization implementation",
+              "Active Directory integration",
+              "IIS deployment and application support",
+              "Technical documentation and requirements analysis",
+            ],
+          },
+          pr: [
+            {
+              t: "South Pars Gas Complex — Business Intelligence & Strategic Management",
+              r: "BI Developer / Software Engineer / Technical Support",
+              d: "Implemented and supported BI and strategic management solutions for the South Pars Gas Complex, covering multiple gas refineries and large-scale industrial data.",
+              k: [
+                "SQL Server",
+                "SSIS",
+                "C#",
+                ".NET Core",
+                "Power BI",
+                "Power BI Report Server",
+                "Data Warehouse",
+              ],
+              h: "Key responsibilities",
+              b: [
+                "BI process implementation from data sources through ETL, DWH, and reporting.",
+                "Development and implementation of management and CEO-level KPI dashboards.",
+                "Integration and standardization of data from multiple industrial sources.",
+                "Implementation and monitoring of strategic and operational indicators.",
+                "Development of analytical and forecasting capabilities for industrial production data.",
+              ],
+            },
+            {
+              t: "Nouri Petrochemical — Business Intelligence Platform",
+              r: "BI Developer / Software Engineer",
+              d: "Implemented BI processes and management dashboards for Nouri Petrochemical using enterprise data and reporting technologies.",
+              k: [
+                "SQL Server",
+                "SSIS",
+                "C#",
+                ".NET Core",
+                "Power BI",
+                "Data Warehouse",
+              ],
+              h: "Key responsibilities",
+              b: [
+                "Data integration and ETL implementation.",
+                "DWH development and SQL-based data processing.",
+                "Development of management and operational dashboards.",
+                "KPI analysis and implementation.",
+                "Technical support and continuous improvement of BI solutions.",
+              ],
+            },
+            {
+              t: "BehinBI — Power BI Report Server Management Portal",
+              r: "Software Developer / Technical Lead",
+              d: "Designed and developed an ASP.NET Core MVC portal for managing and providing controlled access to Power BI Report Server content.",
+              k: [
+                "ASP.NET Core MVC",
+                "C#",
+                "SQL Server",
+                "Power BI Report Server",
+                "Active Directory",
+                "IIS",
+              ],
+              h: "Key capabilities",
+              b: [
+                "Centralized access to organizational Power BI reports.",
+                "Integration with Windows / Active Directory authentication and authorization.",
+                "Role- and user-based access control.",
+                "Dashboard and folder-level access management.",
+                "Session-based user context and authorization.",
+                "Support for multiple organizational units and refinery environments.",
+              ],
+            },
+            {
+              t: "BSC Setup Wizard — Strategic Management System",
+              r: "Software Developer / Technical Lead",
+              d: "Developed a setup and configuration wizard for a strategic management / BSC platform using ASP.NET Core and .NET.",
+              h: "Key capabilities",
+              b: [
+                "Organization initialization and configuration.",
+                "Administrative account creation.",
+                "Industry and organizational model configuration.",
+                "Unit and KPI setup.",
+                "Security-oriented authentication and authorization configuration.",
+                "Account lockout and password policy implementation.",
+              ],
+            },
+            {
+              t: "Enterprise Risk Management (ERM)",
+              r: "Software Developer / Technical Responsible",
+              d: "Provided software engineering and technical responsibility for an Enterprise Risk Management organizational system, including system development, requirements analysis, maintenance, and technical support.",
+            },
+            {
+              t: "Organizational Complaints Management System",
+              r: "Software Developer / Technical Responsible",
+              d: "Participated in the development and technical responsibility of an enterprise Organizational Complaints Management System, focusing on software implementation, business requirements, and system support.",
+            },
+            {
+              t: "VLM — Ministry of Oil",
+              r: "Software Developer / Technical Responsible",
+              d: "Contributed to the development and technical implementation of the VLM organizational system for the Ministry of Oil, including software engineering, requirements analysis, and enterprise system support.",
+            },
+          ],
+          skGroups: {
+            "Programming & Frameworks": [
+              "C#:A",
+              ".NET / .NET Core:U",
+              "ASP.NET Core MVC:U",
+              "ASP.NET Core Web API:B",
+              "Entity Framework Core:U",
+              "HTML / CSS:A",
+              "JavaScript:B",
+            ],
+            "Database & Data": [
+              "Microsoft SQL Server:A",
+              "T-SQL:A",
+              "Query Optimization:U",
+              "Database Design:U",
+              "Data Warehouse:U",
+              "SSIS:U",
+            ],
+            "Business Intelligence": [
+              "Business Intelligence:U",
+              "Power BI:U",
+              "Power BI Report Server:U",
+              "BSC / Strategic Management Systems:U",
+            ],
+            "Infrastructure & Security": [
+              "IIS:A",
+              "Git / GitHub:I",
+              "Active Directory:B",
+              "Authentication & Authorization:B",
+              "REST API / Web Services:B",
+            ],
+          },
+          levels: {
+            A: ["Advanced", 4],
+            U: ["Upper-Intermediate", 3],
+            I: ["Intermediate", 2],
+            B: ["Basic", 1],
+          },
+          co: "Software Engineering|Enterprise Application Development|Business Intelligence|SQL Server & Database Development|Data Warehouse & ETL|KPI & Strategic Management Systems|Requirements Analysis|System Integration|Problem Solving|Analytical Thinking|Technical Leadership|Project Coordination|Client Communication|Technical Documentation|Training & Knowledge Transfer|Presentation|Working in Industrial Environments|Working with Sensitive / Restricted Data",
+          clLead:
+            "Strategic management, BI, software engineering, and organizational systems for organizations including:",
+          cl: "Ministry of Energy of Iran|Ministry of Oil of Iran|National Iranian Gas Company|South Pars Gas Complex|Nouri Petrochemical Company|Karoon Petrochemical Company|Tondgoyan Petrochemical Company|Persian Gulf Hoveyzeh Gas Refining Company|Parsian Gas Refinery|Fajr Jam Gas Refinery|Bidboland Gas Refinery|Ilam Gas Refinery|Sarkhun & Qeshm Gas Refinery|Khanegiran Gas Refinery|National Iranian Oil Terminals Company|Tavanir|Iran Post|Ministry of Education of Iran|Social Security Organization of Iran|IMPASCO|SAIPA Yadak|Aliasys",
+          edu: {
+            uni: "Islamic Azad University — Khomeinishahr Branch",
+            deg: "B.Sc. in Computer Engineering — Software",
+            yr: "2019 – 2026",
+          },
+          langT: "English",
+          langLvl: "Professional Working Proficiency",
+          lg: [
+            ["Reading", "Excellent", 4],
+            ["Writing", "Good", 3],
+            ["Listening", "Intermediate", 2],
+            ["Speaking", "Intermediate", 2],
+          ],
+          native: "<b>Persian</b> — Native",
+          adTitle: "Additional Information",
+          ad: [
+            "Professional experience with large-scale <b>industrial, governmental, and enterprise systems</b>",
+            "Experience communicating with <b>senior managers and CEOs</b>",
+            "Experience delivering <b>technical training and knowledge transfer</b>",
+            "Experience working with <b>restricted and sensitive organizational data</b>",
+            "Open to <b>international software engineering, BI, SQL Server, and enterprise technology opportunities</b>",
+          ],
+          ct: {
+            title: "Let's work together",
+            sub: "Open to international software engineering, BI, SQL Server, and enterprise technology opportunities.",
+            email: "Email",
+            phone: "Phone",
+            linkedin: "LinkedIn",
+            github: "GitHub",
+            loc: "Location",
+            locV: "Tehran, Iran",
+          },
+          footer: "Arash Keshani Zade",
+          toggle: "FA",
+        },
+
+        fa: {
+          dir: "rtl",
+          locale: "fa-IR",
+          title:
+            "آرش کشانی‌زاده – مهندس نرم‌افزار .NET | متخصص هوش تجاری و SQL Server",
+          desc: "رزومه آرش کشانی‌زاده، مهندس نرم‌افزار .NET و متخصص هوش تجاری و SQL Server.",
+          nav: [
+            "خانه",
+            "درباره من",
+            "تجربه کاری",
+            "پروژه‌ها",
+            "مهارت‌ها",
+            "مشتریان",
+            "تحصیلات",
+            "تماس",
+          ],
+          hero: {
+            pill: "آماده همکاری‌های بین‌المللی",
+            name: "آرش کشانی‌زاده",
+            sub: "مهندس نرم‌افزار .NET | متخصص هوش تجاری و SQL Server",
+            loc: "تهران، ایران",
+            lead: "نرم‌افزار سازمانی و هوش تجاری برای سازمان‌های بزرگ صنعتی و دولتی.",
+            email: "ایمیل به من",
+            linkedin: "لینکدین",
+            github: "گیت‌هاب",
+          },
+          pf: [
+            ["نقش فعلی", "سرپرست تیم پشتیبانی | مسئول فنی"],
+            ["شرکت", "بهین گستر گیتی، از ۱۴۰۱"],
+            ["تحصیلات", "کارشناسی مهندسی کامپیوتر — نرم‌افزار"],
+          ],
+          stats: [
+            { n: 5, p: "~", s: "", l: "سال تجربه حرفه‌ای" },
+            { n: 20, p: "", s: "+", l: "سازمان و مشتری" },
+            { n: 100, p: "", s: "+", l: "سامانه و پروژه" },
+            { n: 1000, p: "", s: "+", l: "شاخص و KPI" },
+            { n: 10, p: "", s: "+", l: "عضو تیم فنی" },
+          ],
+          sec: {
+            about: "خلاصه حرفه‌ای",
+            exp: "سوابق حرفه‌ای",
+            pr: "پروژه‌های منتخب",
+            sk: "مهارت‌های فنی",
+            co: "شایستگی‌های حرفه‌ای",
+            cl: "تجربه پروژه‌ای و سازمانی",
+            more: "تحصیلات و زبان‌ها",
+            ct: "تماس",
+          },
+          about: [
+            "مهندس نرم‌افزار و متخصص <b>هوش تجاری و SQL Server</b> با حدود ۵ سال تجربه حرفه‌ای در حوزه توسعه نرم‌افزار، Business Intelligence، پایگاه داده، انبار داده و سامانه‌های مدیریت استراتژیک سازمانی.",
+            "دارای تجربه طراحی، توسعه، استقرار و پشتیبانی <b>سامانه‌های سازمانی و راهکارهای BI در مقیاس بزرگ</b> برای مجموعه‌های دولتی، صنعتی، نفت، گاز و پتروشیمی. تسلط حرفه‌ای بر <b>C#، .NET، ASP.NET Core، SQL Server، T-SQL، SSIS، Power BI، Power BI Report Server و DWH</b>.",
+            "دارای تجربه عملی در تحلیل نیازمندی‌های سازمانی، طراحی و پیاده‌سازی شاخص‌های کلیدی عملکرد، یکپارچه‌سازی سامانه‌ها، توسعه نرم‌افزارهای سازمانی و پشتیبانی فنی پروژه‌ها.",
+            "دارای تجربه همکاری با بیش از <b>۲۰ سازمان و مشتری</b>، مشارکت در بیش از <b>۱۰۰ سامانه و پروژه</b> و پیاده‌سازی و پشتیبانی بیش از <b>۱۰۰۰ شاخص و KPI</b>. همچنین دارای تجربه سرپرستی و پشتیبانی تیم فنی بیش از <b>۱۰ نفر</b> و ارتباط مستقیم با مدیران ارشد و مدیران عامل سازمان‌ها.",
+          ],
+          ex: {
+            company: "شرکت بهین گستر گیتی",
+            role: "سرپرست تیم پشتیبانی | مسئول فنی پروژه | توسعه‌دهنده نرم‌افزار",
+            meta: "۱۴۰۱ – تاکنون<br />تهران",
+            rsTitle: "حوزه‌های اصلی مسئولیت",
+            items: [
+              "طراحی، توسعه و نگهداری سامانه‌های سازمانی با استفاده از <b>C#، .NET، ASP.NET Core MVC، Entity Framework Core، SQL Server و T-SQL</b>.",
+              "طراحی و پیاده‌سازی راهکارهای <b>هوش تجاری و انبار داده</b> برای سازمان‌ها و مجموعه‌های صنعتی بزرگ.",
+              "طراحی و توسعه داشبوردهای مدیریتی و گزارش‌های سازمانی با استفاده از <b>Power BI، Power BI Report Server، SSIS، SQL Server و .NET Core</b>.",
+              "تحلیل نیازمندی‌های کسب‌وکار و تبدیل مسائل سازمانی به راهکارهای نرم‌افزاری و فنی.",
+              "تحلیل، طراحی و پیاده‌سازی <b>شاخص‌های کلیدی عملکرد (KPI)</b> و شاخص‌های مدیریتی و استراتژیک.",
+              "مشارکت در طراحی و پیاده‌سازی سامانه‌های <b>مدیریت استراتژیک و BSC</b>.",
+              "مسئولیت فنی و پشتیبانی تخصصی چندین پروژه نرم‌افزاری و سازمانی.",
+              "تعامل مستقیم با مدیران ارشد، مدیران عامل، کارشناسان و تیم‌های فنی سازمان‌های مشتری.",
+              "سرپرستی و پشتیبانی یک تیم فنی بیش از <b>۱۰ نفر</b>.",
+              "تحلیل و رفع مشکلات فنی، مستندسازی، انتقال دانش و آموزش کاربران و تیم‌های پشتیبانی.",
+              "مشارکت در یکپارچه‌سازی سامانه‌ها و برقراری ارتباط میان سیستم‌های نرم‌افزاری و منابع مختلف داده.",
+              "فعالیت در پروژه‌های دارای <b>اطلاعات سازمانی حساس و محدودشده</b> در محیط‌های صنعتی و دولتی.",
+            ],
+            rs: [
+              "مهندسی نرم‌افزار و توسعه سامانه‌های سازمانی",
+              "طراحی و توسعه پایگاه داده SQL Server",
+              "توسعه کوئری‌ها و Stored Procedureهای پیچیده با T-SQL",
+              "بهینه‌سازی Query و عملکرد پایگاه داده",
+              "طراحی و پیاده‌سازی DWH",
+              "طراحی فرآیندهای ETL با SSIS",
+              "طراحی و توسعه داشبوردهای مدیریتی با Power BI",
+              "پیاده‌سازی و مدیریت Power BI Report Server",
+              "پیاده‌سازی سامانه‌های مدیریت استراتژیک و BSC",
+              "تحلیل نیازمندی‌ها و مسائل کسب‌وکار",
+              "یکپارچه‌سازی سامانه‌ها",
+              "احراز هویت و کنترل دسترسی",
+              "استقرار و پشتیبانی نرم‌افزار روی IIS",
+              "مستندسازی فنی و آموزش کاربران",
+            ],
+          },
+          pr: [
+            {
+              t: "مجتمع گاز پارس جنوبی — سامانه هوش تجاری و مدیریت استراتژیک",
+              r: "توسعه‌دهنده BI | مهندس نرم‌افزار | مسئول پشتیبانی فنی",
+              d: "مشارکت در طراحی، پیاده‌سازی و پشتیبانی راهکارهای <b>هوش تجاری و مدیریت استراتژیک</b> برای مجتمع گاز پارس جنوبی و مجموعه پالایشگاه‌های آن.",
+              k: [
+                "SQL Server",
+                "SSIS",
+                "C#",
+                ".NET Core",
+                "Power BI",
+                "Power BI Report Server",
+                "Data Warehouse",
+              ],
+              h: "مسئولیت‌های کلیدی",
+              b: [
+                "پیاده‌سازی فرآیند BI از منابع داده تا ETL، انبار داده و داشبوردهای مدیریتی.",
+                "طراحی و پیاده‌سازی داشبوردهای مدیریتی و داشبوردهای سطح مدیرعامل.",
+                "یکپارچه‌سازی و استانداردسازی داده‌های حاصل از منابع مختلف صنعتی.",
+                "تحلیل و پیاده‌سازی شاخص‌های استراتژیک، عملیاتی و مدیریتی.",
+                "توسعه قابلیت‌های تحلیلی و پیش‌بینی برای داده‌های تولیدی و صنعتی.",
+                "پشتیبانی و بهبود مستمر سامانه‌های BI و مدیریتی.",
+              ],
+            },
+            {
+              t: "پتروشیمی نوری — سامانه هوش تجاری",
+              r: "توسعه‌دهنده BI | مهندس نرم‌افزار",
+              d: "مشارکت در پیاده‌سازی فرآیند کامل هوش تجاری و داشبوردهای مدیریتی برای <b>پتروشیمی نوری</b>.",
+              k: [
+                "SQL Server",
+                "SSIS",
+                "C#",
+                ".NET Core",
+                "Power BI",
+                "Data Warehouse",
+              ],
+              h: "مسئولیت‌های کلیدی",
+              b: [
+                "طراحی و پیاده‌سازی فرآیندهای ETL و انتقال داده.",
+                "طراحی و توسعه ساختارهای DWH.",
+                "توسعه Queryها و فرآیندهای پردازش داده در SQL Server.",
+                "طراحی و توسعه داشبوردهای مدیریتی و عملیاتی.",
+                "تحلیل و پیاده‌سازی KPIها.",
+                "پشتیبانی فنی و توسعه قابلیت‌های جدید سامانه.",
+              ],
+            },
+            {
+              t: "BehinBI — پورتال مدیریت Power BI Report Server",
+              r: "توسعه‌دهنده نرم‌افزار | مسئول فنی",
+              d: "طراحی و توسعه یک پورتال سازمانی مبتنی بر <b>ASP.NET Core MVC</b> برای مدیریت و ارائه دسترسی کنترل‌شده به گزارش‌ها و داشبوردهای Power BI Report Server.",
+              k: [
+                "ASP.NET Core MVC",
+                "C#",
+                "SQL Server",
+                "Power BI Report Server",
+                "Active Directory",
+                "IIS",
+              ],
+              h: "قابلیت‌های کلیدی",
+              b: [
+                "ایجاد دسترسی متمرکز به گزارش‌ها و داشبوردهای سازمانی.",
+                "یکپارچه‌سازی با Windows Authentication و Active Directory.",
+                "مدیریت دسترسی مبتنی بر کاربر و گروه.",
+                "کنترل دسترسی در سطح پوشه و داشبورد.",
+                "مدیریت Context کاربران و مجوزهای دسترسی.",
+                "پشتیبانی از ساختار چندواحدی و چندپالایشگاهی.",
+                "پیاده‌سازی سامانه با رویکرد سازمانی و امنیت‌محور.",
+              ],
+            },
+            {
+              t: "BSC Setup Wizard — سامانه راه‌اندازی مدیریت استراتژیک",
+              r: "توسعه‌دهنده نرم‌افزار | مسئول فنی",
+              d: "طراحی و توسعه Wizard راه‌اندازی و پیکربندی سامانه مدیریت استراتژیک مبتنی بر <b>ASP.NET Core / .NET</b>.",
+              h: "قابلیت‌های کلیدی",
+              b: [
+                "راه‌اندازی اولیه سازمان و اطلاعات پایه.",
+                "ایجاد حساب مدیر سامانه.",
+                "تعریف صنعت و مدل سازمانی.",
+                "تعریف واحدهای سازمانی و شاخص‌های کلیدی عملکرد.",
+                "پیاده‌سازی فرآیندهای امنیتی احراز هویت و مجوزدهی.",
+                "اعمال سیاست‌های رمز عبور و قفل حساب کاربری.",
+              ],
+            },
+            {
+              t: "سامانه مدیریت ریسک سازمانی — ERM",
+              r: "توسعه‌دهنده نرم‌افزار | مسئول فنی",
+              d: "مشارکت در توسعه و مسئولیت فنی سامانه <b>مدیریت ریسک سازمانی (Enterprise Risk Management)</b> شامل تحلیل نیازمندی‌ها، توسعه نرم‌افزار، نگهداری و پشتیبانی فنی.",
+            },
+            {
+              t: "سامانه مدیریت شکایات سازمانی",
+              r: "توسعه‌دهنده نرم‌افزار | مسئول فنی",
+              d: "مشارکت در طراحی و توسعه سامانه سازمانی <b>مدیریت شکایات</b> با تمرکز بر تحلیل نیازمندی‌ها، پیاده‌سازی نرم‌افزار و پشتیبانی فنی.",
+            },
+            {
+              t: "سامانه VLM — وزارت نفت",
+              r: "توسعه‌دهنده نرم‌افزار | مسئول فنی",
+              d: "مشارکت در توسعه و پیاده‌سازی سامانه سازمانی <b>VLM وزارت نفت</b>، شامل توسعه نرم‌افزار، تحلیل نیازمندی‌ها و پشتیبانی فنی سامانه.",
+            },
+          ],
+          skGroups: {
+            "برنامه‌نویسی و توسعه نرم‌افزار": [
+              "C#:A",
+              ".NET / .NET Core:U",
+              "ASP.NET Core MVC:U",
+              "ASP.NET Core Web API:B",
+              "Entity Framework Core:U",
+              "HTML / CSS:A",
+              "JavaScript:B",
+            ],
+            "پایگاه داده و داده": [
+              "Microsoft SQL Server:A",
+              "T-SQL:A",
+              "Query Optimization:U",
+              "Database Design:U",
+              "Data Warehouse:U",
+              "SSIS:U",
+            ],
+            "هوش تجاری و مدیریت": [
+              "Business Intelligence:U",
+              "Power BI:U",
+              "Power BI Report Server:U",
+              "BSC / سامانه‌های مدیریت استراتژیک:U",
+            ],
+            "زیرساخت و امنیت": [
+              "IIS:A",
+              "Git / GitHub:I",
+              "Active Directory:B",
+              "Authentication & Authorization:B",
+              "REST API / Web Services:B",
+            ],
+          },
+          levels: {
+            A: ["پیشرفته", 4],
+            U: ["بالاتر از متوسط", 3],
+            I: ["متوسط", 2],
+            B: ["مقدماتی", 1],
+          },
+          co: "مهندسی نرم‌افزار|توسعه سامانه‌های سازمانی|هوش تجاری|توسعه پایگاه داده و SQL Server|طراحی و توسعه انبار داده|ETL و یکپارچه‌سازی داده|طراحی و پیاده‌سازی KPI|مدیریت استراتژیک و BSC|تحلیل نیازمندی‌ها|تحلیل مسائل کسب‌وکار|یکپارچه‌سازی سامانه‌ها|حل مسئله|تفکر تحلیلی|رهبری و هماهنگی تیم فنی|ارتباط با مشتری و ذی‌نفعان|مستندسازی فنی|آموزش و انتقال دانش|ارائه و ارائه‌های فنی|کار در محیط‌های صنعتی|کار با اطلاعات حساس و محدودشده",
+          clLead:
+            "تجربه همکاری و اجرای پروژه‌های نرم‌افزاری، هوش تجاری و مدیریت استراتژیک برای مجموعه‌هایی از جمله:",
+          cl: "وزارت نیرو جمهوری اسلامی ایران|وزارت نفت جمهوری اسلامی ایران|شرکت ملی گاز ایران|مجتمع گاز پارس جنوبی|شرکت پتروشیمی نوری|پتروشیمی کارون|پتروشیمی تندگویان|پالایشگاه گاز هویزه خلیج فارس|پالایشگاه گاز پارسیان|پالایشگاه گاز فجر جم|پالایشگاه گاز بیدبلند|پالایشگاه گاز ایلام|پالایشگاه گاز سرخون و قشم|پالایشگاه گاز خانگیران|شرکت پایانه‌های نفتی ایران|شرکت توانیر ایران|شرکت ملی پست ایران|وزارت آموزش و پرورش جمهوری اسلامی ایران|سازمان تأمین اجتماعی|شرکت تولید مواد معدنی ایران (IMPASCO)|شرکت سایپا یدک|شرکت آلیاسیس",
+          edu: {
+            uni: "دانشگاه آزاد اسلامی — واحد خمینی‌شهر",
+            deg: "کارشناسی مهندسی کامپیوتر — گرایش نرم‌افزار",
+            yr: "۱۳۹۸ – ۱۴۰۵",
+          },
+          langT: "انگلیسی",
+          langLvl: "تسلط حرفه‌ای در محیط کاری",
+          lg: [
+            ["درک مطلب", "عالی", 4],
+            ["نوشتار", "خوب", 3],
+            ["شنیدار", "متوسط", 2],
+            ["مکالمه", "متوسط", 2],
+          ],
+          native: "<b>فارسی</b> — زبان مادری",
+          adTitle: "اطلاعات تکمیلی",
+          ad: [
+            "حدود <b>۵ سال تجربه حرفه‌ای</b> در حوزه نرم‌افزار، BI و سامانه‌های سازمانی",
+            "تجربه همکاری با بیش از <b>۲۰ سازمان و مشتری</b>",
+            "مشارکت در بیش از <b>۱۰۰ سامانه و پروژه</b>",
+            "تجربه کار با بیش از <b>۱۰۰۰ شاخص و KPI</b>",
+            "تجربه سرپرستی و پشتیبانی تیم فنی <b>۱۰+ نفره</b>",
+            "تجربه تعامل مستقیم با مدیران ارشد و مدیران عامل",
+            "تجربه آموزش کاربران و انتقال دانش فنی",
+            "تجربه فعالیت در پروژه‌های صنعتی، دولتی و سازمانی",
+            "تجربه کار با داده‌ها و اطلاعات سازمانی حساس",
+          ],
+          ct: {
+            title: "بیایید با هم کار کنیم",
+            sub: "آماده همکاری در حوزه مهندسی نرم‌افزار، هوش تجاری، SQL Server و فناوری‌های سازمانی در سطح بین‌المللی.",
+            email: "ایمیل",
+            phone: "تلفن",
+            linkedin: "لینکدین",
+            github: "گیت‌هاب",
+            loc: "موقعیت مکانی",
+            locV: "تهران، ایران",
+          },
+          footer: "آرش کشانی‌زاده",
+          toggle: "EN",
+        },
+      };
+
+      /* ============================================================
+         Helpers
+      ============================================================ */
+      const R = document.documentElement;
+      const $ = (s) => document.querySelector(s);
+      const H = (s, h) => {
+        const el = $(s);
+        if (el) el.innerHTML = h;
+      };
+      const li = (a) => a.map((x) => `<li>${x}</li>`).join("");
+      const tg = (a) => a.map((x) => `<span>${x}</span>`).join("");
+      const bar = (n) =>
+        `<div class="bar"><i style="--w:${n * 25}%"></i></div>`;
+
+      const NAV_HREFS = [
+        "#top",
+        "#about",
+        "#experience",
+        "#projects",
+        "#skills",
+        "#clients",
+        "#more",
+        "#contact",
+      ];
+      const STACK = [
+        "C#",
+        ".NET Core",
+        "ASP.NET Core MVC",
+        "Entity Framework Core",
+        "SQL Server",
+        "T-SQL",
+        "SSIS",
+        "Power BI",
+        "Power BI Report Server",
+        "Data Warehouse",
+        "Active Directory",
+        "IIS",
+      ];
+
+      let currentLang = "en";
+      let cardObs = null;
+
+      /* ============================================================
+         Mobile menu helpers
+      ============================================================ */
+      const mnu = $("#mnu");
+      const lkEl = $("#navlinks");
+
+      function closeMenu() {
+        lkEl.classList.remove("open");
+        mnu.textContent = "☰";
+        mnu.setAttribute("aria-expanded", "false");
+      }
+      function toggleMenu() {
+        const open = lkEl.classList.toggle("open");
+        mnu.textContent = open ? "✕" : "☰";
+        mnu.setAttribute("aria-expanded", open ? "true" : "false");
+      }
+      mnu.addEventListener("click", toggleMenu);
+      // Close the menu when a link inside is clicked (event delegation)
+      lkEl.addEventListener("click", (e) => {
+        if (e.target.tagName === "A") closeMenu();
+      });
+      // Close when clicking outside
+      document.addEventListener("click", (e) => {
+        if (!lkEl.classList.contains("open")) return;
+        if (e.target.closest(".nav")) return;
+        closeMenu();
+      });
+      // Close on Escape
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeMenu();
+      });
+
+      /* ============================================================
+         Render
+      ============================================================ */
+      function render(lang, animate) {
+        const t = DATA[lang];
+        currentLang = lang;
+
+        R.lang = lang;
+        R.dir = t.dir;
+        document.title = t.title;
+        const md = document.querySelector('meta[name="description"]');
+        if (md) md.setAttribute("content", t.desc);
+
+        /* nav */
+        H(
+          "#navlinks",
+          t.nav.map((n, i) => `<a href="${NAV_HREFS[i]}">${n}</a>`).join(""),
+        );
+        $("#lng").textContent = t.toggle;
+
+        /* hero */
+        H("#h-pill", `<i class="dot"></i>${t.hero.pill}`);
+        H("#h-name", t.hero.name);
+        H("#h-sub", t.hero.sub);
+        H("#h-loc", `📍 ${t.hero.loc}`);
+        H("#h-lead", t.hero.lead);
+        H(
+          "#h-btns",
+          `<a class="b p" href="mailto:arashia075@gmail.com">${t.hero.email}</a>` +
+            `<a class="b" href="https://linkedin.com/in/arashkeshanizade" target="_blank" rel="noopener">${t.hero.linkedin}</a>` +
+            `<a class="b" href="https://github.com/HosseinKeshani" target="_blank" rel="noopener">${t.hero.github}</a>`,
+        );
+
+        /* avatar alt text */
+        const av = $("#avatar");
+        if (av) av.alt = t.hero.name;
+
+        /* profile card */
+        H(
+          "#pf",
+          t.pf
+            .map(
+              ([k, v]) =>
+                `<div class="kv"><small>${k}</small><b>${v}</b></div>`,
+            )
+            .join(""),
+        );
+
+        /* stats */
+        H(
+          "#stats",
+          t.stats
+            .map(
+              (s) =>
+                `<div class="card"><span class="n" data-i="${t.stats.indexOf(s)}"></span><small>${s.l}</small></div>`,
+            )
+            .join(""),
+        );
+
+        /* section headings */
+        H("#h-about", t.sec.about);
+        H("#h-exp", t.sec.exp);
+        H("#h-pr", t.sec.pr);
+        H("#h-sk", t.sec.sk);
+        H("#h-co", t.sec.co);
+        H("#h-cl", t.sec.cl);
+        H("#h-more", t.sec.more);
+        H("#h-ct", t.sec.ct);
+
+        /* about */
+        H("#about-body", t.about.map((p) => `<p class="ab">${p}</p>`).join(""));
+
+        /* experience */
+        H("#ex-co", t.ex.company);
+        H("#ex-role", t.ex.role);
+        H("#ex-meta", t.ex.meta);
+        H("#ex", li(t.ex.items));
+        H("#h-rs", t.ex.rsTitle);
+        H("#rs", tg(t.ex.rs));
+
+        /* projects */
+        H(
+          "#pr",
+          t.pr
+            .map(
+              (p) =>
+                `<div class="card pj"><h3>${p.t}</h3><p class="role">${p.r}</p><p>${p.d}</p>${
+                  p.k ? `<div class="tg">${tg(p.k)}</div>` : ""
+                }${
+                  p.b ? `<h4>${p.h || ""}</h4><ul>${li(p.b)}</ul>` : ""
+                }</div>`,
+            )
+            .join(""),
+        );
+
+        /* skills */
+        H(
+          "#sk",
+          Object.entries(t.skGroups)
+            .map(
+              ([g, arr]) =>
+                `<div class="card"><h3>${g}</h3>${arr
+                  .map((s) => {
+                    const i = s.lastIndexOf(":");
+                    const n = s.slice(0, i);
+                    const lv = t.levels[s.slice(i + 1)];
+                    return `<div class="sk"><span>${n}<em>${lv[0]}</em></span>${bar(lv[1])}</div>`;
+                  })
+                  .join("")}</div>`,
+            )
+            .join(""),
+        );
+        H("#co", tg(t.co.split("|")));
+
+        /* clients */
+        H("#cl-lead", t.clLead);
+        H("#cl", tg(t.cl.split("|")));
+
+        /* education & languages */
+        H("#edu-uni", t.edu.uni);
+        H("#edu-deg", t.edu.deg);
+        H("#edu-yr", t.edu.yr);
+        H("#lg-t", t.langT);
+        H("#lg-lvl", t.langLvl);
+        H(
+          "#lg",
+          t.lg
+            .map(
+              ([a, b, n]) =>
+                `<div class="sk"><span>${a}<em>${b}</em></span>${bar(n)}</div>`,
+            )
+            .join(""),
+        );
+        H("#lg-native", t.native);
+
+        /* additional */
+        H("#h-ad", t.adTitle);
+        H("#ad", li(t.ad));
+
+        /* contact */
+        H("#ct-title", t.ct.title);
+        H("#ct-sub", t.ct.sub);
+        H(
+          "#ct-tiles",
+          `<a class="tile" href="mailto:arashia075@gmail.com"><i>✉️</i><span><small>${t.ct.email}</small><b>arashia075@gmail.com</b></span></a>` +
+            `<a class="tile" href="tel:+989109198278"><i>📞</i><span><small>${t.ct.phone}</small><b>+98 910 919 8278</b></span></a>` +
+            `<a class="tile" href="https://linkedin.com/in/arashkeshanizade" target="_blank" rel="noopener"><i>🔗</i><span><small>${t.ct.linkedin}</small><b>linkedin.com/in/arashkeshanizade</b></span></a>` +
+            `<a class="tile" href="https://github.com/HosseinKeshani" target="_blank" rel="noopener"><i>💻</i><span><small>${t.ct.github}</small><b>github.com/HosseinKeshani</b></span></a>` +
+            `<div class="tile"><i>📍</i><span><small>${t.ct.loc}</small><b>${t.ct.locV}</b></span></div>`,
+        );
+        H("#ft", t.footer);
+
+        /* marquee (tech stack stays latin) */
+        H("#mq", tg(STACK) + tg(STACK));
+
+        /* reset mobile menu state on language change */
+        closeMenu();
+
+        /* counters */
+        runCounters(t, animate);
+
+        /* reveal */
+        markCards(animate);
+      }
+
+      /* ============================================================
+         Counters
+      ============================================================ */
+      function runCounters(t, animate) {
+        const dg = t.locale;
+        document.querySelectorAll("#stats .n").forEach((el) => {
+          const s = t.stats[+el.dataset.i];
+          const pre = s.p || "";
+          const suf = s.s || "";
+          const fmt = (v) => pre + Math.round(v).toLocaleString(dg) + suf;
+          if (
+            !animate ||
+            matchMedia("(prefers-reduced-motion:reduce)").matches
+          ) {
+            el.textContent = fmt(s.n);
+            return;
+          }
+          const t0 = performance.now();
+          (function f(now) {
+            const k = Math.min((now - t0) / 1400, 1);
+            el.textContent = fmt(s.n * (1 - (1 - k) ** 3));
+            if (k < 1) requestAnimationFrame(f);
+          })(t0);
+        });
+      }
+
+      /* ============================================================
+         Card reveal
+      ============================================================ */
+      function markCards(animate) {
+        const cards = document.querySelectorAll(".card");
+        cards.forEach((c) => c.classList.add("rv"));
+        if (!animate) {
+          cards.forEach((c) => c.classList.add("in"));
+          return;
+        }
+        if (!cardObs) {
+          cardObs = new IntersectionObserver(
+            (es) =>
+              es.forEach((e) => {
+                if (e.isIntersecting) {
+                  e.target.classList.add("in");
+                  cardObs.unobserve(e.target);
+                }
+              }),
+            { threshold: 0.1 },
+          );
+        }
+        cards.forEach((c) => cardObs.observe(c));
+      }
+
+      /* ============================================================
+         Theme
+      ============================================================ */
+      const th = $("#th");
+      const dk = () =>
+        R.dataset.theme
+          ? R.dataset.theme === "dark"
+          : matchMedia("(prefers-color-scheme:dark)").matches;
+      const ic = () => {
+        th.textContent = dk() ? "☀️" : "🌙";
+      };
+      try {
+        const s = localStorage.getItem("theme");
+        if (s) R.dataset.theme = s;
+      } catch (e) {}
+      ic();
+      th.onclick = () => {
+        const n = dk() ? "light" : "dark";
+        R.dataset.theme = n;
+        try {
+          localStorage.setItem("theme", n);
+        } catch (e) {}
+        ic();
+      };
+
+      /* ============================================================
+         Language toggle
+      ============================================================ */
+      $("#lng").onclick = () => {
+        const next = currentLang === "en" ? "fa" : "en";
+        try {
+          localStorage.setItem("lang", next);
+        } catch (e) {}
+        render(next, false);
+        window.scrollTo({ top: 0, behavior: "auto" });
+      };
+
+      /* ============================================================
+         Scroll progress + nav highlight
+      ============================================================ */
+      const pg = $("#pg");
+      addEventListener(
+        "scroll",
+        () => {
+          const h = R.scrollHeight - innerHeight;
+          pg.style.width = (h > 0 ? (scrollY / h) * 100 : 0) + "%";
+        },
+        { passive: true },
+      );
+
+      const so = new IntersectionObserver(
+        (es) =>
+          es.forEach((e) => {
+            if (e.isIntersecting) {
+              const links = document.querySelectorAll(".lk a");
+              links.forEach((a) =>
+                a.classList.toggle("on", a.hash === "#" + e.target.id),
+              );
+            }
+          }),
+        { rootMargin: "-30% 0px -60% 0px" },
+      );
+      document.querySelectorAll("section[id]").forEach((s) => so.observe(s));
+
+      /* ============================================================
+         Pointer glow
+      ============================================================ */
+      addEventListener("pointermove", (e) => {
+        const c = e.target.closest && e.target.closest(".card");
+        if (c) {
+          const b = c.getBoundingClientRect();
+          c.style.setProperty("--x", e.clientX - b.left + "px");
+          c.style.setProperty("--y", e.clientY - b.top + "px");
+        }
+      });
+
+      /* ============================================================
+         Init
+      ============================================================ */
+      try {
+        const saved = localStorage.getItem("lang");
+        if (saved && DATA[saved]) currentLang = saved;
+      } catch (e) {}
+      render(currentLang, true);
+    </script>
+  </body>
+</html>
